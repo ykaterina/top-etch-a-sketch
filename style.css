@@ -1,0 +1,12 @@
+.container {
+    display: grid;
+}
+
+.gridRow {
+    border: 1px solid black;
+    display: grid;
+}
+
+.cell {
+    border: 1px solid black;
+}
