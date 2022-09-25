@@ -1,8 +1,9 @@
 const container = document.querySelector('.container');
 const cells = document.querySelectorAll('.grid-item');
+const setBtn = document.querySelector('#setGrid');
 
 window.addEventListener("load", () => {
-    createGrid();
+    createGrid(16);
 });
 
 container.addEventListener('mouseover', e => {
@@ -10,15 +11,26 @@ container.addEventListener('mouseover', e => {
         e.target.style.cssText = "background-color: black;";
 });
 
-function createGrid(){
-    container.style.setProperty('--grid-rows', 16);
-    container.style.setProperty('--grid-cols', 16);
-    for (c = 0; c < (16 * 16); c++) {
+function createGrid(squares){
+    container.style.setProperty('--grid-rows', squares);
+    container.style.setProperty('--grid-cols', squares);
+    for (c = 0; c < (squares * squares); c++) {
         let cell = document.createElement("div");
         container.appendChild(cell).className = "grid-item";
     }
 }
 
-function hoverCell(e){
-    e.style.cssText = "background-color: black;";
+setBtn.addEventListener('click', function() {
+    let squares = 0;
+    while(isNaN(squares) && (squares > 100 || squares < 1){
+        squares = prompt("Enter Number of Squares", '');
+    }
+        
+    clearSquares();
+    createGrid(squares);
+});
+
+function clearSquares(){
+    while (container.hasChildNodes())
+        container.removeChild(container.lastChild);
 }
