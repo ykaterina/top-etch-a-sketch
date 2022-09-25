@@ -1,25 +1,24 @@
 const container = document.querySelector('.container');
-const gridrows = document.querySelectorAll('.gridRow');
+const cells = document.querySelectorAll('.grid-item');
 
 window.addEventListener("load", () => {
-    createRows();
-    createCells();
+    createGrid();
 });
 
-function createRows(){
-    for(let i=0; i < 16; i++){
-        const gridrow = document.createElement('div');
-        gridrow.classList.add('gridRow');
-        container.appendChild(gridrow);
+container.addEventListener('mouseover', e => {
+    if(e.target.className = "grid-item")
+        e.target.style.cssText = "background-color: black;";
+});
+
+function createGrid(){
+    container.style.setProperty('--grid-rows', 16);
+    container.style.setProperty('--grid-cols', 16);
+    for (c = 0; c < (16 * 16); c++) {
+        let cell = document.createElement("div");
+        container.appendChild(cell).className = "grid-item";
     }
 }
 
-function createCells(){
-    for(let i = 0; i < gridrows.length; i++){
-        for(let e = 0; e < 16; e++){
-            const gridcol = document.createElement('div');
-            gridcol.classList.add('cell');
-            gridrows[e].appendChild(gridcol);
-        }
-    }
+function hoverCell(e){
+    e.style.cssText = "background-color: black;";
 }
