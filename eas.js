@@ -21,8 +21,8 @@ function createGrid(squares){
 }
 
 setBtn.addEventListener('click', function() {
-    let squares = 0;
-    while(isNaN(squares) && (squares > 100 || squares < 1){
+    let squares = prompt("Enter Number of Squares", '');
+    while(isNaN(squares) || (squares > 100 || squares < 1)){
         squares = prompt("Enter Number of Squares", '');
     }
         
