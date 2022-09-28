@@ -4,14 +4,18 @@
       align-items: center;
   }
 
+  h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }
+
   #setGrid {
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
   }
 
   .container {
-    height: 700px;
-    width: 700px;
+    height: 500px;
+    width: 500px;
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), auto);
     grid-template-columns: repeat(var(--grid-cols), auto);
@@ -21,8 +25,4 @@
     padding: 1em;
     border: 1px solid #ddd;
     text-align: center;
-  }
-
-  .hovered{
-      background-color: black;
   }

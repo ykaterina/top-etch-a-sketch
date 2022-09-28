@@ -7,8 +7,9 @@ window.addEventListener("load", () => {
 });
 
 container.addEventListener('mouseover', e => {
+    const randomColor = Math.floor(Math.random()*16777215).toString(16);
     if(e.target.className = "grid-item")
-        e.target.style.cssText = "background-color: black;";
+        e.target.style.backgroundColor = "#"+randomColor;
 });
 
 function createGrid(squares){
