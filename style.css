@@ -13,16 +13,22 @@
     padding: 10px;
   }
 
+  .wrapper {
+    height: 80vw;
+    width: 80vw;
+    max-height: 500px;
+    max-width: 500px;
+    display: flex;
+  }
+
   .container {
-    height: 500px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), auto);
-    grid-template-columns: repeat(var(--grid-cols), auto);
+    grid-template-rows: repeat(var(--grid-rows), 2fr);
+    grid-template-columns: repeat(var(--grid-cols), 2fr);
   }
   
   .grid-item {
-    padding: 1em;
-    border: 1px solid rgb(233, 233, 233);
-    text-align: center;
+    border: 1px solid rgb(201, 201, 201);
   }
